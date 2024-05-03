@@ -15,28 +15,23 @@
             "text": "Unverzichtbare Kenntnisse für alltägliche Aufgaben werden dokumentiert. Allerdings gibt es noch keine klar definierten Prozesse, um Wissenslücken proaktiv zu schließen.",
             "score": 2,
             "recommendation": "Etablieren Sie formelle Prozesse zur Identifikation von Wissenslücken und nutzen Sie Metriken, um die Produktivitätssteigerung im Unternehmen zu messen."
-            
           },
           {
             "text": "Formelle Prozesse zur Identifikation von Wissenslücken werden etabliert. Das Unternehmen nutzt Metriken, um die Produktivitätssteigerung zu messen.",
             "score": 3,
             "recommendation": "Führen Sie eine quantitative Messung der Wissensmanagementslücken durch Metriken durch, um diese zu bewerten und systematisch zu schließen."
-            
           },
           {
             "text": "Es wird eine quantitative Messung der Wissensmanagementslücken durch Metriken durchgeführt, um diese quantitativ zu bewerten und systematisch zu schließen.",
             "score": 4,
             "recommendation":"Überprüfen und verbessern Sie kontinuierlich den Prozess zur Erkennung von Wissensmanagementslücken, um sicherzustellen, dass er flexibel bleibt und leicht an neue Anforderungen angepasst werden kann."
-            
           },
           {
             "text": "Der Prozess zur Erkennung der Wissensmanagementslücken wird kontinuierlich überprüft und verbessert. Der bestehende Prozess kann leicht an neue Anforderungen angepasst werden.",
             "score": 5,
             "recommendation": "Sie haben den hochsten Reifegrad im Kriterium XXXX erreicht. Eine fortlaufende Überwachung und Anpassung der bestehenden Maßnahmen ist jedoch erforderlich."
-            
           }
         ],
-        
         "selectedAnswerIndex": null
       },
       {
@@ -167,11 +162,9 @@
         ],
         "selectedAnswerIndex": null
       }
-      
     ],
     "totalScore": 0
   },
-
   {
     "name": "Technologie",
     "questions": [
