@@ -1,0 +1,225 @@
+
+html, body {
+    height: 100%;
+    margin: 0x;
+    padding: 0x;
+    display: flex;
+    flex-direction: column; /* Stapelt die Elemente vertikal */
+    /*justify-content:center; /* Zentriert den Inhalt vertikal */
+    align-items: center; /* Zentriert den Inhalt horizontal */
+    text-align: center; /* Zentriert den Text horizontal */
+    background-color: rgb(134, 121, 114);
+}
+  
+
+#welcomeScreen {
+    
+    padding-left:300px;
+    padding-right: 300px;
+    margin-top: 0x;
+    margin-bottom: 0x;
+    font-size: 18px;
+    border-radius: 10px;
+    color: #f5f5f5;
+    background:#a5948e;          
+    width: 90%;
+    max-width: 700px; /* Passt die maximale Breite an, aber ist für die Zentrierung nicht erforderlich */
+    height: 100%;
+}
+
+#assessment {
+    padding: 300px;
+    padding-top: 0;
+    padding-bottom: 10%;
+    font-size: 17px;
+    border-radius: 10px;
+    color: #000000;
+    background: hsl(0, 0%, 100%);
+    width: 100%;
+    max-width: 750px; /* Passt die maximale Breite an, aber ist für die Zentrierung nicht erforderlich */
+    
+}
+
+
+#progressBarContainer {
+    width: 98%;
+    background-color: #e0e0e0;
+    padding: 3px;
+    border-radius: 5px;
+    margin: 10px 0;
+    margin-bottom: 20px;
+}
+
+
+#progressBar {
+    height: 20px;
+    width: 0%;
+    background-color: rgb(107, 177, 182);
+    border-radius: 3px;
+    transition: width 0.5s;
+   
+}
+
+
+
+.distance {
+    margin-bottom: 10em; /* Ersetzt <br> durch einen unteren Abstand */
+}
+
+.question-text div {
+    margin-bottom: 1rem; /* Abstand nach jeder Antwortoption */
+
+    
+}
+
+/* Zusätzlicher Abstand um den Text */
+.question-text {   /*hier muss answer text heißen*/
+    line-height: 1.7;
+    margin-left: -5rem;
+    margin-right: -5rem; 
+    text-align:center;   
+}
+
+.answer-option {
+    background-color: #e6dddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 9px;
+    max-width: 7500px;; /* Stellt die Breite ein und subtrahiert die Padding-Werte */
+    box-sizing: border-box; /* Stellt sicher, dass das Padding die Breite nicht beeinflusst */
+    margin-left: -5rem;
+    margin-right: -5rem; 
+   
+}
+
+.button {
+    margin: 10px;
+    padding: 8px 16px;
+    border:none;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #000;
+    border-color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    outline:none;
+    transition: background-color 0.3s ease;
+}
+
+
+.button:hover {background-color: #d2e1e9;} /* Farbänderung beim Hover */
+
+.button:active {background-color: #c7bcb6;} /* Farbänderung beim Klicken */
+
+/* Container für die Buttons */
+.button-container {
+    display:flex;
+    justify-content:space-between; /* Platz zwischen den Buttons */
+    padding: 0px 0; /* Etwas Platz oben und unten */
+}
+
+/* Zurück-Button links ausrichten */
+
+#backButton {
+    margin-right: auto;
+    margin-inline-end: auto;
+ }/* Sorgt dafür, dass der Zurück-Button nach links geschoben wird */
+
+
+/* Weiter-Button und Nächste-Dimension-Button rechts ausrichten */
+#nextButton,
+#submitAssessmentButton {
+     margin-left: auto;
+     margin-block-start: auto;
+    } /* Sorgt dafür, dass die Buttons nach rechts geschoben werden */
+
+
+#homepageButton{
+    position: fixed; /* Bleibt immer an der gleichen Stelle */
+    top: 10px; /* Abstand vom oberen Rand */
+    left: 10px; /* Abstand vom linken Rand */
+    z-index: 1000; /* Stellt sicher, dass der Button über anderen Elementen liegt */
+}
+
+
+
+/* Löschen der Floats nach den Buttons */
+.clearfix {
+    clear: both;
+}
+
+#resultsScreen {
+    padding-left:300px;
+    padding-right: 300px;
+    margin-top: 0x;
+    margin-bottom: 0x;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #080808;
+    background: #ebe4e1;
+    width: 90%;
+    max-width: 700px;
+    height: 100%;
+    
+    
+}
+
+.dimension-result {
+    
+    margin-bottom: 50px;
+}
+
+.detail-button {
+
+    margin-top: 10px;
+}
+
+.detail-screen {
+    
+    margin-top: 0x;
+    margin-bottom: 0x;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #333333;
+    width: 90%;
+    max-width: 1500px;
+    height: 100%;
+    
+}
+
+.question-detail {
+    margin-bottom: 20px; /* Abstand zwischen den Kriterien */
+    padding: 30px; /* Padding innerhalb der Frage-Detail-Box */
+    border: 1px solid #535252; /* Umrandung für jede Frage */
+    background-color: #f9f9f9; /* Hintergrundfarbe kriterium+Rekommendation*/
+    border-radius: 8px; /* Abgerundete Ecken */
+    
+}
+
+.recommendation-box {
+    padding: 30px; /* Innerer Abstand für Empfehlungsbox */
+    margin-top: 10px; /* Abstand nach dem Kriterium */
+    background-color: #e6e6e6; /* Hintergrundfarbe für Empfehlungen */
+    border-radius: 8px; /* Abgerundete Ecken */
+    
+}
+
+.icon-bar a{
+    display: none; /* Standardmäßig nicht angezeigt */
+    position: fixed; /* Bleibt immer an der gleichen Stelle */
+    top: 30px; /* Abstand vom oberen Rand */
+    left: 30px; /* Abstand vom linken Rand */
+    z-index: 1000; /* Stellt sicher, dass der Button über anderen Elementen liegt */
+    color: white;
+    background-color: #867972; /* Dark-grey background */
+    font-size: 36px;
+}
+  
+  .icon-bar a:hover {
+    background-color: #867972; /* Add a hover color */
+}
+  
+.icon-bar a:active {
+    background-color: #867972; /* Add an active/current color */
+    color:#a3bbb9
+  }
