@@ -2,7 +2,7 @@
   {
     "name": "Prozess",
     "questions": [
-      {
+      /*{
         "criteria": "Klar definierte Prozesse zur Wissenslückenbehebung",
         "text": "Werden Wissenslücken auf systematische Weise identifiziert und mithilfe klar definierter Prozesse geschlossen?",
         "answers": [
@@ -129,7 +129,7 @@
           }
         ],
         "selectedAnswerIndex": null
-      },
+      },*/
       {
         "criteria": "Krisenbewältigungssystem für reibungslosen Betrieb und Wiederherstellung",
         "text": "Verfügt das Unternehmen über eine systematischen Prozess für die Bewältigung von Krisensituationen oder unvorhergesehenen Ereignissen, das einen störungsfreien Betrieb und die Wiederherstellung sicherstellt?",
@@ -167,7 +167,7 @@
   },
   { "name": "Technologie",
     "questions": [
-      {
+     /* {
         "criteria": "Integration von Wissensmanagement-Technologien in die Organisationsarchitektur",
         "text": "Werden wissensmanagementfördernde Technologien in die Systemarchitektur der Organisation integriert?",
         "answers": [
@@ -294,7 +294,7 @@
           }
         ],
         "selectedAnswerIndex": null
-      },
+      },*/
       {
         "criteria": "Echtzeit, integriert und intelligent Informationssysteme",
         "text": "Sind Informationssysteme in Echtzeit, integriert und intelligent?",
@@ -334,7 +334,7 @@
  {
     "name": "Strategie",
     "questions": [
-      {
+     /* {
         "criteria": "Best Practices im Wissensmanagement",
         "text": "Werden Best Practices im Wissensmanagement aktiv gesucht und implementiert?",
         "answers": [
@@ -429,7 +429,7 @@
           }
         ],
         "selectedAnswerIndex": null
-      },
+      },*/
       {
         "criteria": "Praktizierung des Wissensmanagements",
         "text": "Gibt es eine Vereinbarung darüber, wo und wie das Wissensmanagement in Ihrem Unternehmen praktiziert wird?",
