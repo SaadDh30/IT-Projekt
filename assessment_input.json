@@ -1,0 +1,321 @@
+[
+  {
+    "name": "Prozess",
+    "questions": [
+      {
+        "criteria": "Klar definierte Prozesse zur Wissenslückenbehebung.",
+        "text": "Werden Wissenslücken auf systematische Weise identifiziert und mithilfe klar definierter Prozesse geschlossen?",
+        "answers": [
+          {
+            "text": "Es existiert keine formalen Prozesse, um Wissenslücke zu identifizieren und zu schließen. Das Unternehmen reagiert nur nach Bedarf und nicht systematisch.",    
+            "score": 1,
+            "recommendation": "Dokumentieren Sie unverzichtbare Kenntnisse für alltägliche Aufgaben und führen Sie klar definierte Prozesse ein, um Wissenslücken proaktiv zu schließen."
+          },
+          {
+            "text": "Unverzichtbare Kenntnisse für alltägliche Aufgaben werden dokumentiert. Allerdings gibt es noch keine klar definierten Prozesse, um Wissenslücken proaktiv zu schließen.",
+            "score": 2,
+            "recommendation": "Etablieren Sie formelle Prozesse zur Identifikation von Wissenslücken und nutzen Sie Metriken, um die Produktivitätssteigerung im Unternehmen zu messen."
+          },
+          {
+            "text": "Formelle Prozesse zur Identifikation von Wissenslücken werden etabliert. Das Unternehmen nutzt Metriken, um die Produktivitätssteigerung zu messen.",
+            "score": 3,
+            "recommendation": "Führen Sie eine quantitative Messung der Wissensmanagementslücken durch Metriken durch, um diese zu bewerten und systematisch zu schließen."
+          },
+          {
+            "text": "Es wird eine quantitative Messung der Wissensmanagementslücken durch Metriken durchgeführt, um diese quantitativ zu bewerten und systematisch zu schließen.",
+            "score": 4,
+            "recommendation":"Überprüfen und verbessern Sie kontinuierlich den Prozess zur Erkennung von Wissensmanagementslücken, um sicherzustellen, dass er flexibel bleibt und leicht an neue Anforderungen angepasst werden kann."
+          },
+          {
+            "text": "Der Prozess zur Erkennung der Wissensmanagementslücken wird kontinuierlich überprüft und verbessert. Der bestehende Prozess kann leicht an neue Anforderungen angepasst werden.",
+            "score": 5,
+            "recommendation": "Sie haben den hochsten Reifegrad im Kriterium XXXX erreicht. Eine fortlaufende Überwachung und Anpassung der bestehenden Maßnahmen ist jedoch erforderlich."
+          }
+        ],
+        "selectedAnswerIndex": null
+      },
+      {
+        "criteria": "dentifizierung und Integration von Schlüsselkompetenzen für strategische Unternehmensziele und -mission.",
+        "text": "Bestimmt das Unternehmen seine Schlüssekompetenzen (strategisch wichtige Fähigkeiten, die einen Wettbewerbsvorteil bieten) und bringt sie mit seiner Mission und seinen strategischen Zielen in Einklang?",
+        "answers": [
+          {
+            "text": "Es existiert keine formalen Prozesse zur Erfassung, Weitergabe und Wiederverwendung von Schlüsselkompetenzen. Das Bewusstsein für die Bedeutung von Schlüsselkompetenzen fehlt.",
+            "score": 1,
+            "recommendation": "Etablieren Sie ein systematisches Dokumentationsverfahren zur Verwaltung und Weiterentwicklung Ihrer Schlüsselkompetenzen für alltägliche Aufgaben."
+          },
+          {
+            "text": "Schlüsselkompetenzen für die Ausführung alltäglicher Aufgaben werden dokumentiert. Das Unternehmen ist sich bewusst und hat die Absicht, seine Schlüsselkompezenen zu verwalten, auch wenn es möglicherweise nicht genau weiß, wie diese umgesetzt werden sollen.",
+            "score": 2,
+            "recommendation": "Implementieren Sie klar definierte Prozessstrukturen zur Gestaltung Ihrer Arbeitssysteme und Schlüsselprozesse und setzen Sie Metriken ein, um Spitzenleistungen zu gewährleisten und signifikanten Kundennutzen zu schaffen."
+          },
+          {
+            "text": "Schlüsselkompetenzen werden implementiert, und es gibt einen formalisierten Prozess, um Schlüsselkompetenzen mit der Unternehmensmission und den strategischen Zielen zu verknüpfen. Das Unternehmen nutzt dabei Metriken, um sicherzustellen, dass diese Kompetenzen zur Erhöhung der Produktivität beitragen.",
+            "score": 3,
+            "recommendation": "Implementieren Sie eine systematische Überwachung Ihrer gut etablierten Schlüsselkompetenzen durch den Einsatz von Metriken, um deren Wirksamkeit in den Arbeitsabläufen Ihres Unternehmens kontinuierlich zu messen und zu optimieren."
+          },
+          {
+            "text": "Schlüsselkompetenzen sind gut etabliert und spiegeln sich innerhalb der Arbeitsabläufe des Unternehmens wider. Zudem erfolgt eine quantitative Messung der Schlüsselkompetenzen durch den Einsatz von Metriken.",
+            "score": 4,
+            "recommendation": "Optimieren Sie kontinuierlich den Prozess zur Identifikation Ihrer Schlüsselkompetenzen und verbessern Sie fortlaufend deren Übereinstimmung mit Ihrer Mission und den strategischen Zielen."
+          },
+          {
+            "text": "Das Unternehmen optimiert kontinuierlich den Identifikationsprozess der Schlüsselkompetenzen und verbessert kontinuierlich die Übereinstimmung zu der Mission und den strategischen Zielen.",
+            "score": 5,
+            "recommendation": "Sie haben den hochsten Reifegrad im Kriterium XXXX erreicht. Eine fortlaufende Überwachung und Anpassung der bestehenden Maßnahmen ist jedoch erforderlich."
+          }
+        ],
+        "selectedAnswerIndex": null
+      },
+      {
+        "criteria": "Gestaltung von Geschäftsprozessen für Kundenwert und Spitzenleistung.",
+        "text": "Gestaltet das Unternehmen seine Arbeitssysteme und Schlüsselprozesse, um Wert für Kunden zu schaffen und Spitzenleistungen zu erreichen?",
+        "answers": [
+          {
+            "text": "Es existiert keine formalen Prozesse zur Erfassung, Weitergabe und Wiederverwendung von Arbeitssystemen und Schlüsselprozessen.",
+            "score": 1,
+            "recommendation": "Dokumentieren Sie Schlüsselprozesse für die tägliche Aufgabenerfüllung und etablieren Sie ein klares Bewusstsein für die Gestaltung von Arbeitssystemen und Schlüsselprozessen, die Wert für Kunden schaffen und Spitzenleistungen erreichen."
+          },
+          {
+            "text": "Schlüsselprozesse für die Ausführung alltäglicher Aufgaben werden dokumentiert. Es existiert ein Bewustsein, Arbeitssysteme und Schlüsselprozesse zu gestalten, um Wert für Kunden zu schaffen und Spiztenleistungen zu erreichen, auch wenn die Umsetzung unklar ist.",
+            "score": 2,
+            "recommendation": "Führen Sie klar formalisierte Prozessstrukturen zur Gestaltung von Arbeitssystemen und Schlüsselprozessen ein und nutzen Sie Metriken, um sicherzustellen, dass diese Systeme und Prozesse Spitzenleistungen erreichen und Kundennutzen generieren."
+          },
+          {
+            "text": "Das Unternehmen hat klar formalisierte Prozessstrukturen zur Gestaltung von Arbeitssystemen und Schlüsselprozessen. Metriken werden verwendet, um sicherzustellen, dass diese Spitzenleistungen erreichen und einen Kundennutzen generieren.",
+            "score": 3,
+            "recommendation": "Führen Sie regelmäßige und systematische Überprüfungen Ihrer Arbeitssysteme und Schlüsselprozesse durch. Nutzen Sie quantitative Messungen durch Metriken, um die Effektivität dieser Systeme in Bezug auf die Schaffung von Kundennutzen und das Erreichen von Spitzenleistungen sicherzustellen."
+          },
+          {
+            "text": "Die Gestaltung von Arbeitssystemen und Schlüsselprozessen wird regelmäßig und systematisch durchgeführt . Es erfolgt eine quantitative Messung durch den Einsatz von Mitriken, um sicherzustellen, dass diese effektiv auf die Schaffung von Kundennutzen und Spitzenleistungen ausgerichtet sind.",
+            "score": 4,
+            "recommendation": "Integrieren Sie die kontinuierliche Verbesserung von Arbeitssystemen und Schlüsselprozessen als festen Bestandteil Ihrer Unternehmenskultur, um nachhaltig Kundennutzen zu schaffen und konstante Spitzenleistungen zu erreichen."
+          },
+          {
+            "text": "Die kontiuerliche Verbesserung der Arbeitssysteme und Schlüsselprozesse ist integraler Bestandteil des Unternehmens. Dadurch wird ein Kundenwert geschaffen und Spitzenleistungen werden erreicht.",
+            "score": 5,
+            "recommendation": "Sie haben den hochsten Reifegrad im Kriterium xXXX erreicht. Eine fortlaufende Überwachung und Anpassung der bestehenden Maßnahmen ist jedoch erforderlich."
+          }
+        ],
+        "selectedAnswerIndex": null
+      },
+      {
+        "criteria": "Implementierung skalierbarer Technologien zur Unterstützung des Wissensmanagement.",
+        "text": "gestaltet das Unternehmen seine Arbeitssysteme und Schlüsselprozesse, um Wert für Kunden zu schaffen und Spitzenleistungen zu erreichen?",
+        "answers": [
+          {
+            "text": "Es existiert keine formalen Prozesse zur Erfassung, Weitergabe und Wiederverwendung von Arbeitssystemen und Schlüsselprozessen.",
+            "score": 1,
+            "recommendation": "Entwickeln sie Pilotprojekte, die auf die Erfüllung von Skalierbarkeitsanforderungen abzielen, um deren Wirksamkeit und Implementierbarkeit zu evaluieren."
+          },
+          {
+            "text": "Schlüsselprozesse für die Ausführung alltäglicher Aufgaben werden dokumentiert. Es existiert ein Bewusstsein, Arbeitssysteme und Schlüsselprozesse zu gestalten, um Wert für Kunden zu schaffen und Spitzenleistungen zu erreichen, auch wenn die Umsetzung unklar ist.",
+            "score": 2,
+            "recommendation": "Setzen Sie unternehmensweite Wissensmanagementprojekte um, die durch den Einsatz von skalierbaren Technologien unterstützt werde, um die Effizienz und Flexibilität der Unternehmensprozesse zu steigern."
+          },
+          {
+            "text": "Das Unternehmen hat klar formalisierte Prozessstrukturen zur Gestaltung von Arbeitssystemen und Schlüsselprozessen. Metriken werden verwendet, um sicherzustellen, dass diese Spitzenleistungen erreichen und einen Kundennutzen generieren.",
+            "score": 3,
+            "recommendation": "Stellen Sie sicher, dass Wissensmanagement-Technologien vollständig integriert sind und Skalierbarkeitsanforderungen erfüllen. Überwachen und bewerten Sie die Nutzung, um eine zufriedenstellende Anwendung zu gewährleisten."
+          },
+          {
+            "text": "Die Gestaltung von Arbeitssystemen und Schlüsselprozessen wird regelmäßig und systematisch durchgeführt. Es erfolgt eine quantitative Messung durch den Einsatz von Metriken, um sicherzustellen, dass diese effektiv auf die Schaffung von Kundennutzen und Spitzenleistungen ausgerichtet sind.",
+            "score": 4,
+            "recommendation": "Führen Sie kontinuierliche Überprüfungen und Verbesserungen der vorhandenen Technologien durch, die Skalierbarkeitsanforderungen unterstützen, um ihre Effizienz und Anpassungsfähigkeit kontinuierlich zu optimieren und zu erweitern."
+          },
+          {
+            "text": "Die kontinuierliche Verbesserung der Arbeitssysteme und Schlüsselprozesse ist integraler Bestandteil des Unternehmens. Dadurch wird ein Kundenwert geschaffen und Spitzenleistungen werden erreicht.",
+            "score": 5,
+            "recommendation": "Sie haben den hochsten Reifegrad im Kriterium XXXX erreicht. Eine fortlaufende Überwachung und Anpassung der bestehenden Maßnahmen ist jedoch erforderlich."
+          }
+        ],
+        "selectedAnswerIndex": null
+      },
+      {
+        "criteria": "Echtzeit, integriert und 'intelligent' Informationssysteme",
+        "text": "werden neue Technologien, Wissen, Flexibilität, Effizienz und Effektivität in die Gestaltung der Arbeitsabläufe des Unternehmens einbezogen?",
+        "answers": [
+          {
+            "text": "Es existieren keine formalen Prozesse zur systematischen Erfassung und Verwendung von neuen Technologien, Wissen, Flexibilität, Effizienz und Effektivität in die Gestaltung der Arbeitsabläufe des Unternehmens.",
+            "score": 1,
+            "recommendation": "Führen Sie Pilotprojekte für 'intelligente', integrierte Echtzeit-Informationssysteme ein, um deren Potenzial zu evaluieren und eine Basis für eine breitere Implementierung zu schaffen."
+          },
+          {
+            "text": "Es gibt erste Ansätze, neue Technologien, Wissen, Flexibilität, Effizienz und Effektivität in die Gestaltung des Wissensmanagements einzubeziehen. Sie sind dokumentiert, allerdings ist die Umsetzung nicht konkretisiert.",
+            "score": 2,
+            "recommendation": "Entwickeln Sie weitere Informationssysteme, die in Echtzeit agieren, integriert sind und 'intelligente' Funktionen besitzen, um die Effizienz und Reaktionsfähigkeit Ihres Unternehmens zu steigern."
+          },
+          {
+            "text": "Es existieren formale Prozesse, die zur systematischen Erfassung und Verwendung neuer Technologien, Wissen, Flexibilität, Effizienz und Effektivität beitragen, um die Produktivitätssteigerung sicherzustellen. Dies wird mithilfe von Metriken gemessen.",
+            "score": 3,
+            "recommendation": "Stellen Sie sicher, dass unternehmensweit integrierte Informationssysteme vollständigen Echtzeitzugriff bieten, nahtlos integriert sind und intelligente Informationsverarbeitung ermöglichen, um eine optimale Nutzung der Datenressourcen zu gewährleisten."
+          },
+          {
+            "text": "Neue Technologien sind fest in die Arbeitsabläufe integriert und Wissen, Flexibilität, Effizienz und Effektivität sind feste Bestandteile des Wissensmanagements. Die Quantität wird durch Metriken gemessen.",
+            "score": 4,
+            "recommendation": "Führen Sie kontinuierliche Überprüfungen und Verbesserungen der bestehenden Informationssysteme durch, die in Echtzeit funktionieren, integriert sind und intelligente Funktionen haben, um deren Effektivität und Innovationskraft fortlaufend zu steigern."
+          },
+          {
+            "text": "Der Einbezug neuer Technologien sowie die Integration von Wissen, Flexibilität, Effizienz und Effektivität wird kontinuierlich überprüft und optimiert. Innovation ist integraler Bestandteil des Wissensmanagements.",
+            "score": 5,
+            "recommendation": "Sie haben den hochsten Reifegrad im Kriterium XXXX erreicht. Eine fortlaufende Überwachung und Anpassung der bestehenden Maßnahmen ist jedoch erforderlich."
+          }
+        ],
+        "selectedAnswerIndex": null
+      }
+    ],
+    "totalScore": 0
+  },
+  {
+    "name": "Technologie",
+    "questions": [
+      {
+        "criteria": "Integration von Wissensmanagement-Technologien in die Organisationsarchitektur.",
+        "text": "Werden wissensmanagementfördernde Technologien in die Systemarchitektur der Organisation integriert?",
+        "answers": [
+          {
+            "text": "Derzeit ist keine spezifische Wissensmanagement-Technologie oder -Infrastruktur in der Organisation implementiert.",
+            "score": 1,
+            "recommendation": "Erweitern und formalisieren Sie Pilotprojekte im Bereich Wissensmanagement, die von operativen Mitarbeitern initiiert wurden, und sichern Sie die Unterstützung und das Engagement des Managements für diese Initiativen."
+          },
+          {
+            "text": "Pilotprojekte im Wissensmanagement wurden gestartet, meist von operativen Mitarbeitern und nicht direkt durch das Management.",
+            "score": 2,
+            "recommendation": "Integrieren Sie Wissensmanagement-Technologien vollständig in die Organisationsarchitektur und stellen Sie sicher, dass diese Technologien auf Unternehmensebene effektiv umgesetzt und genutzt werden."
+          },
+          {
+            "text": "Es wurden Wissensmanament-Technologien in die Organisationsarchitektur integriert und auf Unternehmensebene bereits umgesetzt.",
+            "score": 3,
+            "recommendation": "Optimieren Sie die Nutzung der Wissensmanagement-Technologien, indem Sie diese vollständig in die Organisationsstruktur und Content-Architektur einbetten, um eine nahtlose und effektive Anwendung zu gewährleisten."
+          },
+          {
+            "text": "WM-Technologien sind vollständig in die Organisationsstruktur integriert, werden angemessen genutzt und sind nahtlos mit der Content-Architektur verbunden.",
+            "score": 4,
+            "recommendation": "Führen Sie kontinuierliche Überprüfungen und Verbesserungen der bestehenden Wissensmanagement-Infrastruktur durch, um sicherzustellen, dass die Technologien effektiv eingebunden sind und optimal genutzt werden, um den Unternehmenserfolg zu unterstützen."
+          },
+          {
+            "text": "Die bestehende Infrastruktur wird stetig optimiert, um Technologien für Wissensmanagement effektiv einzubinden.",
+            "score": 5,
+            "recommendation": "Sie haben den hochsten Reifegrad im Kriterium XXXX erreicht. Eine fortlaufende Überwachung und Anpassung der bestehenden Maßnahmen ist jedoch erforderlich."
+          }
+        ],
+        "selectedAnswerIndex": null
+      }
+    ],
+    "totalScore": 0
+  },
+  {
+    "name": "Strategie",
+    "questions": [
+      {
+        "criteria": "Best Practices im Wissensmanagement.",
+        "text": "Werden Best Practices im Wissensmanagement aktiv gesucht und implementiert?",
+        "answers": [
+          {
+            "text": "Die Organisation zeigt keine Initiativen, um Best Practices im Bereich Wissensmanagement zu identifizieren oder anzuwenden.",
+            "score": 1,
+            "recommendation": "Erkennen Sie die Bedeutung von Best Practices im Wissensmanagement und entwickeln Sie klare Strategien und Methoden, um diese zu suchen und zu implementieren."
+          },
+          {
+            "text": "Die Bedeutung von von Best practices wurde erkannt, aber es fehlen klare Wege zu ihrer Suche und Implementierung.",
+            "score": 2,
+            "recommendation": "Implementieren Sie eine grundlegende Strategie mit definierten Rollen und Verantwortlichkeiten, um Best Practices im Wissensmanagement aktiv zu suchen und einzuführen."
+          },
+          {
+            "text": "Es gibt eine grundlegende Strategie und definierte Rollen, um Best Practices im Wissensmanagement aktiv zu suchen und einzuführen.",
+            "score": 3,
+            "recommendation": "Verankern Sie die aktive Umsetzung und kontinuierliche Verbesserung von Best Practices im Wissensmanagement in den organisatorischen Abläufen, um eine nachhaltige Entwicklung zu fördern."
+          },
+          {
+            "text": "Aktive Umsetzung und kontinuierliche Verbesserung von Best Practices im Wissensmanagement sind in den organisatorischen Abläufen verankert.",
+            "score": 4,
+            "recommendation": "Stellen Sie sicher, dass Best Practices im Wissensmanagement kontinuierlich gesucht, bewertet und automatisch in die Arbeitsabläufe integriert werden, um eine ständige Anpassung an neue Herausforderungen und Gelegenheiten zu gewährleisten."
+          },
+          {
+            "text": "Best Practices im Wissensmanagement werden kontinuierlich gesucht, bewertet und automatisch in die Arbeitsabläufe integriert.",
+            "score": 5,
+            "recommendation": "Sie haben den hochsten Reifegrad im Kriterium XXXX erreicht. Eine fortlaufende Überwachung und Anpassung der bestehenden Maßnahmen ist jedoch erforderlich."
+          }
+        ],
+        "selectedAnswerIndex": null
+      }
+    ],
+    "totalScore": 0
+  },
+  {
+    "name": "Organisation",
+    "questions": [
+      {
+        "criteria": "Verknüpfung von Wissen mit finanziellen Ergebnissen",
+        "text": "Hat die Organisation Methoden entwickelt, um Wissen mit finanziellen Ergebnissen zu verknüpfen?",
+        "answers": [
+          {
+            "text": "Die Organisation ist sich der Notwendigkeit, Methoden zu entwickeln, um Wissen mit finanziellen Ergebnissen zu verknüpfen, nicht bewusst.",    
+            "score": 1,
+            "recommendation": "Beginnen Sie mit der Sensibilisierung des Top-Managements und der relevanten Stakeholder für die Notwendigkeit, Methoden zu entwickeln, die Wissen mit finanziellen Ergebnissen verknüpfen. Setzen Sie diesen Prozess fort, indem Sie erste Überlegungen und Diskussionen initiieren, um konkrete Ansätze zur systematischen Verbindung von Wissensmanagement und finanzieller Leistung zu entwickeln."
+          },
+          {
+            "text": "Die Organisation ist sich der Notwendigkeit bewusst, Methoden zu entwickeln, um Wissen mit finanziellen Ergebnissen zu verknüpfen. Erste Überlegungen finden statt.",
+            "score": 2,
+            "recommendation": "Implementieren Sie grundlegende Ansätze, um den finanziellen Wert von Wissen zu messen, unterstützt durch Basis-Schulungen und eine einfache Wissensmanagement-Strategie, um ein solides Verständnis und eine Anwendungsbasis zu schaffen."
+          },
+          {
+            "text": "Es gibt grundlegende Ansätze, den finanziellen Wert von Wissen zu messen, unterstützt durch Basis-Schulungen und eine einfache WM-Strategie.",
+            "score": 3,
+            "recommendation": "Entwickeln Sie fortgeschrittene und standardisierte Methoden, um Wissen effektiv mit finanziellen Ergebnissen zu verknüpfen. Stellen Sie sicher, dass diese Methoden eng mit Ihrer Wissensmanagement-Strategie abgestimmt sind, um Konsistenz und Wirksamkeit zu gewährleisten."
+          },
+          {
+            "text": "Die Organisation hat fortgeschrittene und standardisierte Methoden entwickelt, um Wissen mit finanziellen Ergebnissen zu verknüpfen. Diese Methoden sind im Einklang mit der WM-Strategie.",
+            "score": 4,
+            "recommendation":"Integrieren Sie die Verknüpfung von Wissen mit finanziellen Ergebnissen als integralen Bestandteil Ihrer Geschäftsprozesse. Überwachen und optimieren Sie diese Verknüpfungen kontinuierlich, um die Effizienz zu maximieren und die Unternehmensleistung zu steigern."
+          },
+          {
+            "text": "Die Verknüpfung von Wissen mit finanziellen Ergebnissen ist ein integraler Bestandteil der Geschäftsprozesse und wird kontinuierlich überwacht und optimiert.",
+            "score": 5,
+            "recommendation": "Sie haben den hochsten Reifegrad im Kriterium 'Verknüpfung von Wissen mit finanziellen Ergebnissen' erreicht. Eine fortlaufende Überwachung und Anpassung der bestehenden Maßnahmen ist jedoch erforderlich."
+          }
+        ],
+        "selectedAnswerIndex": null
+      }
+    ],
+    "totalScore": 0
+  },
+{
+    "name": "People",
+    "questions": [
+      {
+        "criteria": "Beurteilung und Vergütung basierend auf Wissensbeiträgen",
+        "text": "Werden Individuen basierend auf ihren Beiträgen zum Wissensmanagement der Organisation eingestellt, bewertet und vergütet?",
+        "answers": [
+          {
+            "text": "Die Bewertung der Mitarbeiter basiert nicht auf ihrem Beitrag zum Wissensmanagement, da es keine festgelegten Kriterien oder ein Bewusstsein dafür gibt.",    
+            "score": 1,
+            "recommendation": "Ermutigen Sie die Mitarbeiter, ihren Beitrag zum Wissensmanagement zu erkennen, und beginnen Sie, systematische Ansätze für die Einstellung, Bewertung und Vergütung zu entwickeln, die diesen Beitrag berücksichtigen."
+          },
+          {
+            "text": "Individuen erkennen die Bedeutung ihres Beitrags zum Wissensmanagement, doch werden sie nicht systematisch entsprechend eingestellt, bewertet oder vergütet.",
+            "score": 2,
+            "recommendation": "Berücksichtigen Sie die Beiträge der Mitarbeiter zum Wissensmanagement aktiv durch die Einführung grundlegender Schulungen und die Definition von Rollen; entwickeln Sie jedoch weiterhin klare Bewertungs- und Vergütungssysteme."
+          },
+          {
+            "text": "Die Organisation beginnt, die Beiträge der Mitarbeiter zum Wissensmanagement zu berücksichtigen, indem sie grundlegende Schulungen anbietet und Rollen definiert, jedoch fehlen noch klare Bewertungs- und Vergütungssysteme.",
+            "score": 3,
+            "recommendation": "Integrieren Sie die Beiträge zum Wissensmanagement zunehmend in die Einstellungs-, Bewertungs- und Vergütungsprozesse, unterstützt durch fortgeschrittene Schulungen und organisatorische Standards, um eine konsistente Bewertung und Anerkennung zu gewährleisten."
+          },
+          {
+            "text": "Mitarbeiterbeiträge zum Wissensmanagement werden zunehmend in Einstellungs-, Bewertungs- und Vergütungsprozessen berücksichtigt, unterstützt durch fortgeschrittene Schulungen und organisatorische Standards.",
+            "score": 4,
+            "recommendation":"Führen Sie umfassende Bewertungsprozesse ein, die die Beiträge zum Wissensmanagement als zentralen Bestandteil der Mitarbeiterleistung integrieren, wobei proaktiver Wissensaustausch und Innovationen besonders gewürdigt werden, um eine Kultur der kontinuierlichen Verbesserung und des Engagements zu fördern."
+          },
+          {
+            "text": "Bewertungen sind umfassend und integrieren die Beiträge zum Wissensmanagement als zentralen Bestandteil der Mitarbeiterleistung, wobei proaktiver Wissensaustausch und Innovationen besonders gewürdigt werden.",
+            "score": 5,
+            "recommendation": "Sie haben den hochsten Reifegrad im Kriterium 'Beurteilung und Vergütung basierend auf Wissensbeiträgen' erreicht. Eine fortlaufende Überwachung und Anpassung der bestehenden Maßnahmen ist jedoch erforderlich."
+          }
+        ],
+        "selectedAnswerIndex": null
+      }
+    ],
+    "totalScore": 0
+  }
+
+]
