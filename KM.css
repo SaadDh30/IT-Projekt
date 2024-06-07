@@ -218,16 +218,13 @@ html, body {
     left: 30px; /* Abstand vom linken Rand */
     z-index: 1000; /* Stellt sicher, dass der Button über anderen Elementen liegt */
     color: white;
-    
     font-size: 36px;
 }
   
   .icon-bar a:hover {
-    background-color: #A0948E; /* Add a hover color */
     color:#e6dddd;
 }
   
 .icon-bar a:active {
-    background-color: #A0948E; /* Add an active/current color */
     color:#a08c91
   }
