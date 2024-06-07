@@ -2,7 +2,7 @@
 let dimensions = [];
 
 function fetchDimensions() {
-  fetch('https://raw.githubusercontent.com/Mariamk03/IT-Projekt/main/assessment_input.json')
+  fetch('https://raw.githubusercontent.com/Mariamk03/IT-Projekt/main/assessment_content.json')
          
     .then(response => response.json())
     .then(data => {
