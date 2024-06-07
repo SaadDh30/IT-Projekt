@@ -6,7 +6,7 @@ html, body {
     padding: 0x;
     display: flex;
     flex-direction: column; /* Stapelt die Elemente vertikal */
-    /*justify-content:center; /* Zentriert den Inhalt vertikal */
+    justify-content:baseline; /* Zentriert den Inhalt vertikal */
     align-items: center; /* Zentriert den Inhalt horizontal */
     text-align: center; /* Zentriert den Text horizontal */
     background-color: rgb(160, 148, 142);
