@@ -2,7 +2,7 @@
 let dimensions = [];
 
 function fetchDimensions() {
-  fetch('https://raw.githubusercontent.com/Mariamk03/IT-Projekt/main/assessment_content.json')
+  fetch('https://raw.githubusercontent.com/Mariamk03/IT-Projekt/main/assessment_input.json')
          
     .then(response => response.json())
     .then(data => {
@@ -17,7 +17,7 @@ function fetchDimensions() {
 document.addEventListener('DOMContentLoaded', fetchDimensions);
 
 let currentDimension = 0;
-let currentQuestionIndex = 0;
+//let currentQuestionIndex = 0;
 
 function startAssessment() {
   document.getElementById('welcomeScreen').style.display = 'none';
@@ -25,7 +25,7 @@ function startAssessment() {
   document.getElementById('progressBarContainer').style.display = 'block';
   document.getElementById('homeIcon').style.display = 'block';
   // Initialisiere totalQuestions hier
-  totalQuestions = dimensions.reduce((total, dimension) => total + dimension.questions.length, 0);
+  //totalQuestions = dimensions.reduce((total, dimension) => total + dimension.questions.length, 0);
 
   loadDimension(currentDimension);
 }
@@ -33,247 +33,178 @@ function startAssessment() {
 
   
 function loadDimension(dimensionIndex) {
-  currentQuestionIndex = 0; // Setzen des Frage-Index auf 0, wenn eine neue Dimension geladen wird
-  loadQuestion(dimensionIndex, currentQuestionIndex);
+    const dimension = dimensions[dimensionIndex];
+    const assessmentContainer = document.getElementById('assessment');
+    let htmlContent = `<h2>${dimension.name}</h2>`;
+
+    dimension.questions.forEach((question, questionIndex) => {
+        htmlContent += `<h3>${question.text}</h3><div class="question-text">`;
+        question.answers.forEach((answer, answerIndex) => {
+            const isChecked = question.selectedAnswerIndex === answerIndex ? 'checked' : '';
+            htmlContent += `
+                <div class="answer-option">
+                    <input type="radio" id="answer_${dimensionIndex}_${questionIndex}_${answerIndex}" 
+                           name="question${dimensionIndex}_${questionIndex}" 
+                           value="${answerIndex}" 
+                           ${isChecked}
+                           onclick="saveAnswer(${dimensionIndex}, ${questionIndex}, ${answerIndex})">
+                    <label for="answer_${dimensionIndex}_${questionIndex}_${answerIndex}">${answer.text}</label>
+                </div>
+            `;
+        });
+        htmlContent += '</div>';
+    });
+
+    htmlContent += `<div class="button-container">`;
+    if (dimensionIndex > 0) {
+        htmlContent += `<button class="button" onclick="previousDimension()">Zurück</button>`;
+    }
+    if (dimensionIndex < dimensions.length - 1) {
+        htmlContent += `<button class="button" onclick="checkAnswersAndProceed(${dimensionIndex}, false)">Nächste Dimension</button>`;
+    } else {
+        htmlContent += `<button class="button" onclick="checkAnswersAndProceed(${dimensionIndex}, true)">Assessment absenden</button>`;
+    }
+    htmlContent += `</div>`;
+
+    assessmentContainer.innerHTML = htmlContent;
+    updateProgressBar();
+}
+  
+  function saveAnswer(dimensionIndex, questionIndex, answerIndex) {
+    let dimension = dimensions[dimensionIndex];
+    let question = dimension.questions[questionIndex];
+    if (question.selectedAnswerIndex !== null) {
+      dimension.totalScore -= question.answers[question.selectedAnswerIndex].score;
+    }
+    question.selectedAnswerIndex = answerIndex;
+    dimension.totalScore += question.answers[answerIndex].score;
+    updateProgressBar();
+  }
+
+  function checkAnswersAndProceed(dimensionIndex, isFinal) {
+    if (areAllQuestionsAnswered(dimensionIndex)) {
+        if (isFinal) {
+            submitAssessment();
+        } else {
+            nextDimension();
+        }
+    } else {
+        alert("Bitte beantworten Sie alle Fragen, bevor Sie fortfahren.");
+    }
 }
 
-
-function loadQuestion(dimensionIndex, questionIndex) {
-  const dimension = dimensions[dimensionIndex];
-  const question = dimension.questions[questionIndex];
-  const assessmentContainer = document.getElementById('assessment');
-
-  // Verwende einen leeren String, um den Inhalt zusammenzustellen
-  let htmlContent = `<h2>${dimension.name}</h2><h3>${question.text}</h3>`;
-
-  // Erstelle den Fragen- und Antwortentext
-  htmlContent += '<div class="question-text">'; // Start div für Frage und Antworten
-  question.answers.forEach((answer, answerIndex) => {
-      const isChecked = question.selectedAnswerIndex === answerIndex ? 'checked' : '';
-      htmlContent += `
-          <div class= "answer-option">
-              <input type="radio" id="answer_${dimensionIndex}_${questionIndex}_${answerIndex}" 
-                     name="question${dimensionIndex}_${questionIndex}" 
-                     value="${answerIndex}" 
-                     ${isChecked}>
-              <label for="answer_${dimensionIndex}_${questionIndex}_${answerIndex}">${answer.text}</label>
-          </div>
-      `;
-  });
-  htmlContent += '</div>'; // Ende div für Frage und Antworten
-
-  // Füge die Buttons hinzu
-  htmlContent += '<div class="button-container clearfix">'; // Start div für Buttons
-  if (dimensionIndex > 0 || questionIndex > 0) {
-      htmlContent += `<button class="button" onclick="previousQuestion()">Zurück</button>`;
-  }
-
-  if (questionIndex < dimension.questions.length - 1) {
-      htmlContent += `<button class="button" onclick="checkAnswerAndProceed(${dimensionIndex}, ${questionIndex})">Weiter</button>`;
-  } else if (dimensionIndex < dimensions.length - 1) {
-      htmlContent += `<button class="button" onclick="checkAnswerAndProceed(${dimensionIndex}, ${questionIndex}, true)">Nächste Dimension</button>`;
-  } else {
-      htmlContent += `<button class="button" onclick="submitAssessment()">Absenden</button>`;
-  }
-  htmlContent += '</div>'; // Ende div für Buttons
-
-  // Setze den ganzen HTML-Inhalt auf einmal
-  assessmentContainer.innerHTML = htmlContent;
+function areAllQuestionsAnswered(dimensionIndex) {
+    return dimensions[dimensionIndex].questions.every(question => question.selectedAnswerIndex !== null);
 }
 
 
 function backToStart() {
-  // Verstecke das Assessment und die Ergebnisseite
-  document.getElementById('welcomeScreen').style.display = 'block';
-  document.getElementById('assessment').style.display = 'none';
-  document.getElementById('progressBarContainer').style.display = 'none';
-  document.getElementById('homeIcon').style.display = 'none';
-  document.getElementById('resultsScreen').style.display = 'none';  // Verstecke die Ergebnisseite
-  document.querySelectorAll('.detail-screen').forEach(screen => screen.style.display = 'none');
+    // Verstecken der Assessment und Results Bildschirme
+    document.getElementById('assessment').style.display = 'none';
+    document.getElementById('resultsScreen').style.display = 'none';
 
-  // Setze alle Antworten und Punktestände zurück
-  dimensions.forEach(dimension => {
-      dimension.questions.forEach(question => {
-          question.selectedAnswerIndex = null; // Setze die ausgewählte Antwort zurück
-      });
-      dimension.totalScore = 0; // Setze den Gesamtpunktestand der Dimension zurück
-  });
+    // Verstecken aller Detailansichten
+    document.querySelectorAll('.detail-screen').forEach(screen => {
+        screen.style.display = 'none';
+    });
 
-  // Setze den Fortschrittsbalken zurück
-  document.getElementById('progressBar').style.width = '0%';
+    // Zeigen der Startseite
+    document.getElementById('welcomeScreen').style.display = 'block';
 
-  // Setze die aktuellen Indizes auf den Anfangswert zurück
-  currentDimension = 0;
-  currentQuestionIndex = 0;
+    // Zurücksetzen des Fortschrittsbalkens auf 0%
+    document.getElementById('progressBar').style.width = '0%';
+
+    // Setzen Sie hier weitere Zurücksetzungen nach Bedarf
 }
-
-
-// Berechne die Gesamtanzahl der Fragen einmalig
-let totalQuestions = dimensions.reduce((total, dimension) => total + dimension.questions.length, 0);
-
-
 
 function updateProgressBar() {
-  // Berechne den aktuellen Fortschritt basierend auf der Anzahl der beantworteten Fragen
-  let answeredQuestions = dimensions.slice(0, currentDimension).reduce((total, dimension) => total + dimension.questions.length, 0) + currentQuestionIndex + 1;
-  let progressPercentage = (answeredQuestions / totalQuestions) * 100;
-  document.getElementById('progressBar').style.width = `${progressPercentage}%`;
-}
+    let totalQuestions = dimensions.reduce((sum, dim) => sum + dim.questions.length, 0);
+    let answeredQuestions = dimensions.reduce((sum, dim) => sum + dim.questions.filter(q => q.selectedAnswerIndex !== null).length, 0);
+    let progressPercentage = (answeredQuestions / totalQuestions) * 100;
+    document.getElementById('progressBar').style.width = `${progressPercentage}%`;
+  }
 
 
 
-function checkAnswerAndProceed(dimensionIndex, questionIndex, toNextDimension = false) {
-  const selectedAnswerElement = document.querySelector(`input[name="question${dimensionIndex}_${questionIndex}"]:checked`);
 
-  if (!selectedAnswerElement) {
-      alert('Bitte wählen Sie eine Antwort aus.');
+function checkDimensionCompletion(dimensionIndex) {
+    let allAnswered = dimensions[dimensionIndex].questions.every(q => q.selectedAnswerIndex !== null);
+    if (!allAnswered) {
+      alert('Bitte beantworten Sie alle Fragen dieser Dimension, bevor Sie fortfahren.');
       return;
+    }
+    nextDimension();
   }
 
-  const selectedAnswerIndex = parseInt(selectedAnswerElement.value);
-  let question = dimensions[dimensionIndex].questions[questionIndex];
-  if (question.selectedAnswerIndex !== null) {
-      // Punkte der vorherigen Antwort abziehen
-      dimensions[dimensionIndex].totalScore -= question.answers[question.selectedAnswerIndex].score;
+  function nextDimension() {
+    if (currentDimension < dimensions.length - 1) {
+      currentDimension++;
+      loadDimension(currentDimension);
+    } else {
+      submitAssessment();
+    }
+  }
+  
+  function previousDimension() {
+    if (currentDimension > 0) {
+      currentDimension--;
+      loadDimension(currentDimension);
+    }
   }
 
-  // Speichere die ausgewählte Antwort und aktualisiere die Punkte
-  question.selectedAnswerIndex = selectedAnswerIndex;
-  dimensions[dimensionIndex].totalScore += question.answers[selectedAnswerIndex].score;
-
-  // Fortschrittsbalken aktualisieren und zur nächsten Frage gehen
-  updateProgressBar();
-
-  if (toNextDimension) {
-      nextDimension();
-  } else {
-      nextQuestion();
-  }
-}
-
-
-
-function previousQuestion() {
-  // Überprüfen, ob es sich um die erste Frage der ersten Dimension handelt
-  if (currentDimension === 0 && currentQuestionIndex === 0) {
-      // Benutzer ist bei der ersten Frage der ersten Dimension, zeige Startseite
-      backToStart();
-  } else {
-      // Punkte von der aktuellen Frage abziehen, wenn eine Antwort ausgewählt wurde
-      let currentQuestion = dimensions[currentDimension].questions[currentQuestionIndex];
-      if (currentQuestion.selectedAnswerIndex !== null) {
-          let currentScore = currentQuestion.answers[currentQuestion.selectedAnswerIndex].score;
-          dimensions[currentDimension].totalScore -= currentScore; // Punkte der aktuellen Frage abziehen
-          currentQuestion.selectedAnswerIndex = null; // Ausgewählte Antwort zurücksetzen
-      }
-
-      // Zur vorherigen Frage navigieren
-      if (currentQuestionIndex > 0) {
-          currentQuestionIndex--;
-      } else if (currentDimension > 0) {
-          currentDimension--;
-          currentQuestionIndex = dimensions[currentDimension].questions.length - 1;
-      }
-
-      loadQuestion(currentDimension, currentQuestionIndex);
-      updateProgressBar(); // Aktualisiere den Fortschrittsbalken
-  }
-}
-
-
-// Aktualisiere nextQuestion und nextDimension, um den Fortschrittsbalken zu aktualisieren
-function nextQuestion() {
-  if (currentQuestionIndex < dimensions[currentDimension].questions.length - 1) {
-      currentQuestionIndex++;
-      loadQuestion(currentDimension, currentQuestionIndex);
-  } else if (currentDimension < dimensions.length - 1) {
-      nextDimension();
-  } else {
-      // Assessment beenden oder Ergebnisse anzeigen
-      console.log('Assessment abgeschlossen.');
-  }
-}
-
-
-
-function nextDimension() {
-  currentDimension++;
-  currentQuestionIndex = -1; // Setze currentQuestionIndex auf -1, da nextQuestion() es sofort inkrementiert
-  nextQuestion(); // Gehe direkt zur nächsten Frage
-}
-
-
-function submitAssessment() {
-  const lastDimensionIndex = dimensions.length - 1;
-  const lastQuestionIndex = dimensions[lastDimensionIndex].questions.length - 1;
-  const lastQuestion = dimensions[lastDimensionIndex].questions[lastQuestionIndex];
-  const selectedAnswerElement = document.querySelector(`input[name="question${lastDimensionIndex}_${lastQuestionIndex}"]:checked`);
-
-  if (selectedAnswerElement && lastQuestion.selectedAnswerIndex === null) {
-      const selectedAnswerIndex = parseInt(selectedAnswerElement.value);
-      lastQuestion.selectedAnswerIndex = selectedAnswerIndex;
-      dimensions[lastDimensionIndex].totalScore += lastQuestion.answers[selectedAnswerIndex].score;
+  function submitAssessment() {
+    document.getElementById('assessment').style.display = 'none';
+    document.getElementById('progressBarContainer').style.display = 'none';
+    document.getElementById('homeIcon').style.display = 'block';
+    showResultsScreen();
   }
 
-  document.getElementById('welcomeScreen').style.display = 'none';
-  document.getElementById('assessment').style.display = 'none';
-  document.getElementById('progressBarContainer').style.display = 'none';
-
-  let resultsHTML = "<h1>Assessment-Ergebnisse</h1>";
-  dimensions.forEach((dimension, index) => {
-      const maxScore = dimension.questions.length * 5; // Each question can have a maximum of 5 points
-      resultsHTML += `<div class="dimension-result">
-          <h2>${dimension.name}: ${dimension.totalScore} / ${maxScore} Punkte</h2>
-          <button class="button detail-button" id="button_${index + 1}" onclick="showDetailScreen(${index + 1})">Detailansicht</button>
-      </div>`;
-      dimension.totalScore = 0; // Reset total score
-  });
-
-  const resultsScreen = document.getElementById('resultsScreen');
-  resultsScreen.innerHTML = resultsHTML;
-  resultsScreen.style.display = 'block'; // Show results screen
+  function showResultsScreen() {
+    const resultsScreen = document.getElementById('resultsScreen');
+    resultsScreen.innerHTML = `<h1>Assessment-Ergebnisse</h1>`;
+    dimensions.forEach((dimension, index) => {
+        const maxScore = dimension.questions.reduce((sum, question) => sum + Math.max(...question.answers.map(a => a.score)), 0);
+        resultsScreen.innerHTML += `<div class="dimension-result">
+            <h2>${dimension.name}: ${dimension.totalScore} / ${maxScore}</h2>
+            <button class="button" onclick="showDetailScreen(${index})">Detailansicht</button>
+        </div>`;
+    });
+    resultsScreen.style.display = 'block';
+    
+    // Verstecke alle Detailansichten
+    document.querySelectorAll('.detail-screen').forEach(screen => {
+        screen.style.display = 'none';
+    });
 }
 
+function showDetailScreen(index) {
+    // Verstecke die Ergebnisansicht und alle anderen Detailansichten
+    document.getElementById('resultsScreen').style.display = 'none';
+    document.querySelectorAll('.detail-screen').forEach(screen => screen.style.display = 'none');
 
-function showResultsScreen() {
-  // Hide all detail screens
-  document.querySelectorAll('.detail-screen').forEach(screen => screen.style.display = 'none');
+    // Hole das spezifische Detailansicht-Element für die gewählte Dimension
+    const detailScreen = document.getElementById(`detailScreen${index + 1}`);
+    const dimension = dimensions[index];
+    let htmlContent = `<h1>${dimension.name}</h1>`;
 
-  // Show the results screen
-  document.getElementById('resultsScreen').style.display = 'block';
-}
+    // Erzeuge HTML-Inhalt für jede Frage
+    dimension.questions.forEach(question => {
+        const selectedAnswer = question.answers[question.selectedAnswerIndex];
+        htmlContent += `
+        <div class="question-detail">
+            <h2><strong>${question.criteria}</strong></h2> <!-- Kriterium fett gedruckt -->
+            <div class="recommendation-box">
+                <p>${selectedAnswer ? selectedAnswer.recommendation : 'Keine Empfehlung verfügbar'}</p>
+            </div>
+        </div>
+        `;
+    });
 
-function showDetailScreen(screenIndex) {
-  // Verstecke den Ergebnisbildschirm und alle anderen Detailbildschirme
-  document.getElementById('resultsScreen').style.display = 'none';
-  const detailScreens = ["detailScreen1", "detailScreen2", "detailScreen3", "detailScreen4", "detailScreen5"];
-  detailScreens.forEach(screen => {
-      document.getElementById(screen).style.display = 'none';
-  });
+    // Button zum Zurückkehren
+    htmlContent += `<button class="button" onclick="showResultsScreen()">Zurück zu Ergebnissen</button>`;
 
-  // Hole die entsprechende Dimension und bereite die Detailansicht vor
-  const dimension = dimensions[screenIndex - 1];
-  const detailScreen = document.getElementById(`detailScreen${screenIndex}`);
-  let htmlContent = `<h1>${dimension.name}</h1>`;
-
-  // Erzeuge den Inhalt für jede Frage der Dimension
-  dimension.questions.forEach((question, index) => {
-      const answer = question.answers[question.selectedAnswerIndex];
-      htmlContent += `
-          <div class="question-detail">
-              <h3>${question.criteria}</h3>
-              <p>${answer ? answer.recommendation : 'Keine Antwort ausgewählt'}</p>
-          </div>
-      `;
-  });
-
-  // Füge den "Zurück zu Übersicht" Button hinzu
-  htmlContent += `
-      <button class="button back-to-overview" onclick="showResultsScreen()">Zurück zu Übersicht</button>
-  `;
-
-  // Setze den HTML-Inhalt und zeige den Detailbildschirm
-  detailScreen.innerHTML = htmlContent;
-  detailScreen.style.display = 'block';
+    // Setze den HTML-Inhalt und zeige die Detailansicht an
+    detailScreen.innerHTML = htmlContent;
+    detailScreen.style.display = 'block';
 }
 
