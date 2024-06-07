@@ -99,26 +99,32 @@ function areAllQuestionsAnswered(dimensionIndex) {
 
 
 function backToStart() {
-    // Reset des aktuellen Dimensionsindex
-    currentDimension = 0;
 
-    // Reset aller gespeicherten Antworten und Punkte in jeder Dimension
-    dimensions.forEach(dimension => {
-        dimension.totalScore = 0;  // Setzt den Gesamtpunktestand zurück
-        dimension.questions.forEach(question => {
-            question.selectedAnswerIndex = null;  // Entfernt die Auswahl der Antwort
-        });
+     // Reset des aktuellen Dimensionsindex
+     currentDimension = 0;
+
+     // Reset aller gespeicherten Antworten und Punkte in jeder Dimension
+     dimensions.forEach(dimension => {
+         dimension.totalScore = 0;  // Setzt den Gesamtpunktestand zurück
+         dimension.questions.forEach(question => {
+             question.selectedAnswerIndex = null;  // Entfernt die Auswahl der Antwort
+         });
+     });
+    // Verstecken der verschiedenen Ansichten
+    document.getElementById('assessment').style.display = 'none';
+    document.getElementById('resultsScreen').style.display = 'none';
+    document.querySelectorAll('.detail-screen').forEach(screen => {
+        screen.style.display = 'none';
     });
 
-    // Stellen Sie sicher, dass die richtigen UI-Elemente angezeigt/versteckt werden
-    document.getElementById('welcomeScreen').style.display = 'block';
-    document.getElementById('assessment').style.display = 'none';
+    // Ausblenden des Fortschrittsbalkens und des Home-Icons
     document.getElementById('progressBarContainer').style.display = 'none';
-    document.getElementById('homeIcon').style.display = 'none';  // Stellen Sie sicher, dass das Home-Icon sichtbar bleibt
-    document.getElementById('resultsScreen').style.display = 'none';
-    document.querySelectorAll('.detail-screen').forEach(screen => screen.style.display = 'none');
+    document.getElementById('homeIcon').style.display = 'none';
 
-    // Reset des Fortschrittsbalkens
+    // Zeigen der Startseite
+    document.getElementById('welcomeScreen').style.display = 'block';
+
+    // Zurücksetzen des Fortschrittsbalkens auf 0%
     document.getElementById('progressBar').style.width = '0%';
 }
 
