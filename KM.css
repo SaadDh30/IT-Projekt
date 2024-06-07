@@ -217,7 +217,7 @@ html, body {
     top: 30px; /* Abstand vom oberen Rand */
     left: 30px; /* Abstand vom linken Rand */
     z-index: 1000; /* Stellt sicher, dass der Button über anderen Elementen liegt */
-    color: white;
+    color: rgb(241, 237, 234);
     font-size: 36px;
 }
   
@@ -226,5 +226,5 @@ html, body {
 }
   
 .icon-bar a:active {
-    color:#a08c91
+    color:#a08c91;
   }
