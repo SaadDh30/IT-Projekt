@@ -15,8 +15,8 @@ html, body {
 
 #welcomeScreen {
     
-    padding-left:88%;
-    padding-right:88%;
+    padding-left:75%;
+    padding-right:75%;
     margin-top: 0x;
     margin-bottom: 0x;
     font-size: 18px;
@@ -29,7 +29,7 @@ html, body {
 }
 
 #assessment {
-    padding: 50%;
+    padding: 300px;
     padding-top: 0;
     padding-bottom: 10%;
     font-size: 17px;
@@ -225,10 +225,10 @@ html, body {
   
   .icon-bar a:hover {
    
-    color:#e6dddd;
+    color:#c0afaf;
 }
   
 .icon-bar a:active {
     
-    color:#a08c91;
+    color:#ffffff;
   }
