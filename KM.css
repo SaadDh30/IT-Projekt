@@ -218,7 +218,7 @@ html, body {
     left: 30px; /* Abstand vom linken Rand */
     z-index: 1000; /* Stellt sicher, dass der Button über anderen Elementen liegt */
     color: white;
-    background-color: #A0948E; /* Dark-grey background */
+    
     font-size: 36px;
 }
   
