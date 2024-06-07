@@ -8,7 +8,7 @@ html, body {
     /*justify-content:center; /* Zentriert den Inhalt vertikal */
     align-items: center; /* Zentriert den Inhalt horizontal */
     text-align: center; /* Zentriert den Text horizontal */
-    background-color: rgb(134, 121, 114);
+    background-color: rgb(160, 148, 142);
 }
   
 
@@ -21,7 +21,7 @@ html, body {
     font-size: 18px;
     border-radius: 10px;
     color: #f5f5f5;
-    background:#a5948e;          
+    background:#b4a49c;          
     width: 90%;
     max-width: 700px; /* Passt die maximale Breite an, aber ist für die Zentrierung nicht erforderlich */
     height: 100%;
@@ -75,29 +75,36 @@ html, body {
 /* Zusätzlicher Abstand um den Text */
 .question-text {   /*hier muss answer text heißen*/
     line-height: 1.7;
-    margin-left: -5rem;
-    margin-right: -5rem; 
-    text-align:center;   
+    margin-left: -7rem;
+    margin-right: -7rem; 
+    text-align:left;   
 }
 
 .answer-option {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items: start;
     background-color: #e6dddd;
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 9px;
-    max-width: 7500px;; /* Stellt die Breite ein und subtrahiert die Padding-Werte */
-    box-sizing: border-box; /* Stellt sicher, dass das Padding die Breite nicht beeinflusst */
-    margin-left: -5rem;
-    margin-right: -5rem; 
-   
-}
+  }
+  
+  .answer-option input[type="radio"] {
+    place-self: start;
+  }
+  
+  .answer-option label {
+    text-align: left;
+  }
 
 .button {
     margin: 10px;
     padding: 8px 16px;
     border:none;
     border-radius: 8px;
-    background-color: #ffffff;
+    background-color: #e6e6e6;
     color: #000;
     border-color: #ffffff;
     font-size: 16px;
@@ -107,9 +114,9 @@ html, body {
 }
 
 
-.button:hover {background-color: #d2e1e9;} /* Farbänderung beim Hover */
+.button:hover {background-color: #a08c91; color: white;} /* Farbänderung beim Hover */
 
-.button:active {background-color: #c7bcb6;} /* Farbänderung beim Klicken */
+.button:active {background-color: #afcdcf;} /* Farbänderung beim Klicken */
 
 /* Container für die Buttons */
 .button-container {
@@ -156,7 +163,7 @@ html, body {
     border-radius: 25px;
     font-size: 18px;
     color: #080808;
-    background: #ebe4e1;
+    background: #ffffff;
     width: 90%;
     max-width: 700px;
     height: 100%;
@@ -190,7 +197,7 @@ html, body {
 .question-detail {
     margin-bottom: 20px; /* Abstand zwischen den Kriterien */
     padding: 30px; /* Padding innerhalb der Frage-Detail-Box */
-    border: 1px solid #535252; /* Umrandung für jede Frage */
+    border: 1px ; /* Umrandung für jede Frage */
     background-color: #f9f9f9; /* Hintergrundfarbe kriterium+Rekommendation*/
     border-radius: 8px; /* Abgerundete Ecken */
     
@@ -211,15 +218,16 @@ html, body {
     left: 30px; /* Abstand vom linken Rand */
     z-index: 1000; /* Stellt sicher, dass der Button über anderen Elementen liegt */
     color: white;
-    background-color: #867972; /* Dark-grey background */
+    background-color: #A0948E; /* Dark-grey background */
     font-size: 36px;
 }
   
   .icon-bar a:hover {
-    background-color: #867972; /* Add a hover color */
+    background-color: #A0948E; /* Add a hover color */
+    color:#e6dddd;
 }
   
 .icon-bar a:active {
-    background-color: #867972; /* Add an active/current color */
-    color:#a3bbb9
+    background-color: #A0948E; /* Add an active/current color */
+    color:#a08c91
   }
