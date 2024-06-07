@@ -33,7 +33,7 @@ html, body {
     padding-bottom: 10%;
     font-size: 17px;
     border-radius: 10px;
-    color: #000000;
+    color: #7c6f67;
     background: hsl(0, 0%, 100%);
     width: 100%;
     max-width: 750px; /* Passt die maximale Breite an, aber ist für die Zentrierung nicht erforderlich */
@@ -105,7 +105,7 @@ html, body {
     border:none;
     border-radius: 8px;
     background-color: #e6e6e6;
-    color: #000;
+    color: #7c6f67;
     border-color: #ffffff;
     font-size: 16px;
     cursor: pointer;
@@ -217,7 +217,7 @@ html, body {
     top: 30px; /* Abstand vom oberen Rand */
     left: 30px; /* Abstand vom linken Rand */
     z-index: 1000; /* Stellt sicher, dass der Button über anderen Elementen liegt */
-    color: rgb(241, 237, 234);
+    color: rgb(206, 203, 203);
     font-size: 36px;
 }
   
