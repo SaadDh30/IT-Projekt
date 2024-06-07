@@ -99,22 +99,27 @@ function areAllQuestionsAnswered(dimensionIndex) {
 
 
 function backToStart() {
-    // Verstecken der Assessment und Results Bildschirme
-    document.getElementById('assessment').style.display = 'none';
-    document.getElementById('resultsScreen').style.display = 'none';
+    // Reset des aktuellen Dimensionsindex
+    currentDimension = 0;
 
-    // Verstecken aller Detailansichten
-    document.querySelectorAll('.detail-screen').forEach(screen => {
-        screen.style.display = 'none';
+    // Reset aller gespeicherten Antworten und Punkte in jeder Dimension
+    dimensions.forEach(dimension => {
+        dimension.totalScore = 0;  // Setzt den Gesamtpunktestand zurück
+        dimension.questions.forEach(question => {
+            question.selectedAnswerIndex = null;  // Entfernt die Auswahl der Antwort
+        });
     });
 
-    // Zeigen der Startseite
+    // Stellen Sie sicher, dass die richtigen UI-Elemente angezeigt/versteckt werden
     document.getElementById('welcomeScreen').style.display = 'block';
+    document.getElementById('assessment').style.display = 'none';
+    document.getElementById('progressBarContainer').style.display = 'none';
+    document.getElementById('homeIcon').style.display = 'none';  // Stellen Sie sicher, dass das Home-Icon sichtbar bleibt
+    document.getElementById('resultsScreen').style.display = 'none';
+    document.querySelectorAll('.detail-screen').forEach(screen => screen.style.display = 'none');
 
-    // Zurücksetzen des Fortschrittsbalkens auf 0%
+    // Reset des Fortschrittsbalkens
     document.getElementById('progressBar').style.width = '0%';
-
-    // Setzen Sie hier weitere Zurücksetzungen nach Bedarf
 }
 
 function updateProgressBar() {
