@@ -24,7 +24,7 @@ html, body {
     color: #f5f5f5;
     background:#b4a49c;          
     width: 90%;
-    max-width: 700px; /* Passt die maximale Breite an, aber ist für die Zentrierung nicht erforderlich */
+    
     height: 100%;
 }
 
@@ -36,8 +36,8 @@ html, body {
     border-radius: 10px;
     color: #000000;
     background: hsl(0, 0%, 100%);
-    width: 100%;
-    max-width: 750px; /* Passt die maximale Breite an, aber ist für die Zentrierung nicht erforderlich */
+    width: 40%;
+    
     
 }
 
