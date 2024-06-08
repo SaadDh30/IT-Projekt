@@ -148,6 +148,7 @@ function checkDimensionCompletion(dimensionIndex) {
   }
 
   function nextDimension() {
+    window.scrollTo(0, 0);
     if (currentDimension < dimensions.length - 1) {
       currentDimension++;
       loadDimension(currentDimension);
@@ -157,6 +158,7 @@ function checkDimensionCompletion(dimensionIndex) {
   }
   
   function previousDimension() {
+    window.scrollTo(0, 0);
     if (currentDimension > 0) {
       currentDimension--;
       loadDimension(currentDimension);
