@@ -67,7 +67,7 @@
         "selectedAnswerIndex": null
       },
       {
-        "criteria": "Gestaltung von Geschäftsprozessen für Kundenwert und Spitzenleistun.",
+        "criteria": "Gestaltung von Geschäftsprozessen für Kundenwert und Spitzenleistun",
         "text": "Gestaltet das Unternehmen seine Arbeitssysteme und Schlüsselprozesse, um Wert für Kunden zu schaffen und Spitzenleistungen zu erreichen?",
         "answers": [
           {
@@ -100,7 +100,7 @@
       },
       {
         "criteria": "Einbezug von Neuem und Effizienz in Prozessgestaltung",
-        "text": "werden neue Technologie, Wissen, Flexibilität, Effizienz und Effektivität in die Gestaltung der Arbeitsabläufe des Unternehmens einbezogen?",
+        "text": "Werden neue Technologie, Wissen, Flexibilität, Effizienz und Effektivität in die Gestaltung der Arbeitsabläufe des Unternehmens einbezogen?",
         "answers": [
           {
             "text": "Es existieren keine formalen Prozesse zur systematischen Erfassung und Verwendung von neuen Technologien, Wissen, Flexibiltät, Effizienz und Effektivität in die Gestasltung der WM-Prozesse Arbeitsabläufe des Unternehmen.",
@@ -201,7 +201,7 @@
       },
       {
         "criteria": "Zentrale und leicht zugängliche Informationsinfrastruktur",
-        "text": "existiert eine technologische Infrastruktur für eine zentrale Sammlung von Informationen, die für alle leicht zugänglich ist?",
+        "text": "Existiert eine technologische Infrastruktur für eine zentrale Sammlung von Informationen, die für alle leicht zugänglich ist?",
         "answers": [
           {
             "text": "Derzeit existiert keine Technologie oder Infrastruktur für eine zentrale Informationsansammlung.",
@@ -214,7 +214,7 @@
             "recommendation": "Fördern Sie die Entwicklung und Implementierung von unternehmensweiten Wissensmanagement-Projekten, wie Intranet-Plattformen und Wissensdatenbanken, um eine zentral zugängliche Informationskollektion zu gewährleisten."
           },
           {
-            "text": "Einige unternehmensweite KM-Projekte laufen bereits und fördern eine zentral zugängliche Informationskollektion (z.B. durch Intranet-Plattformen und Wissensdatenbanken).",
+            "text": "Einige unternehmensweite WM-Projekte laufen bereits und fördern eine zentral zugängliche Informationskollektion (z.B. durch Intranet-Plattformen und Wissensdatenbanken).",
             "score": 3,
             "recommendation": "Optimieren Sie die vorhandene technologische Infrastruktur, um sicherzustellen, dass sie eine effektive zentrale Informationsammlung über Wissensmanagement-Systeme auf einem angemessenen Niveau ermöglicht."
           },
